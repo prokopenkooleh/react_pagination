@@ -24,7 +24,9 @@ export const App: React.FC = () => {
   });
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
+    if (page !== currentPage) {
+      setCurrentPage(page);
+    }
   };
 
   const selectHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
